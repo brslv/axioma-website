@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axioma - Minimalistic, at-a-glance todo dashboard.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    /* Box sizing rules */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /* Remove default margin */
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    figure,
+    blockquote,
+    dl,
+    dd {
+      margin: 0;
+    }
+
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role="list"],
+    ol[role="list"] {
+      list-style: none;
+    }
+
+    /* Set core root defaults */
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    /* Set core body defaults */
+    body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      line-height: 1.5;
+    }
+
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
+
+    /* Make images easier to work with */
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Inherit fonts for inputs and buttons */
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* Remove all animations and transitions for people that prefer not to see them */
+    @media (prefers-reduced-motion: reduce) {
+      html:focus-within {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Core styles */
+    body {
+      font-family: "Raleway", sans-serif;
+    }
+
+    .container {
+      max-width: 680px;
+    }
+
+    .container--big {
+      max-width: 1280px;
+    }
+
+    .container--with-padding {
+      padding-left: 2em !important;
+      padding-right: 2em !important;
+    }
+
+    .hero {
+      background: #222;
+      color: white;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .hero__inner {
+      text-align: center;
+      height: 100%;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero__inner .title {
+      font-weight: bold;
+      animation: hero-title 2s forwards;
+    }
+
+    @keyframes hero-title {
+      from {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .download-btn {
+      opacity: 0;
+      background: white;
+      padding: 1em 2em;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      margin: 4em 0;
+      font-weight: bold;
+      text-decoration: none;
+      color: #222;
+      animation: download-btn 2s forwards;
+      animation-delay: 0.5s;
+    }
+
+    .download-btn:hover {
+      opacity: 0.9 !important;
+    }
+
+    @keyframes download-btn {
+      from {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero__inner .description {
+      font-weight: 300;
+      opacity: 0.8;
+      animation: hero-description 3.5s forwards;
+    }
+
+    @keyframes hero-description {
+      from {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .preview {
+      margin-top: -30vh;
+      margin-inline: auto;
+      animation: preview 1s forwards;
+    }
+
+    @keyframes preview {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .preview img {
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+    }
+
+    .content {
+      margin-inline: auto;
+      padding: 4em 0;
+      color: #222;
+      font-size: 1.15em;
+    }
+
+    .content p {
+      margin: 1.1em 0;
+    }
+  </style>
+  <body>
+    <div class="hero">
+      <header class="hero__inner container container--with-padding">
+        <h1 class="title">Axioma</h1>
+        <h2 class="description">
+          The minimalistic, at-a-glance todo dashboard.
+        </h2>
+        <a
+          target="_blank"
+          class="download-btn"
+          href="https://chrome.google.com/webstore/detail/axioma/akonnjpfomgniolgicfinlepiihpdkbf"
+          >Download for Google Chrome</a
+        >
+      </header>
+    </div>
+
+    <section class="preview container--big container--with-padding">
+      <img src="/public/img/Screenshot-1.png" alt="Preview of Axioma" />
+    </section>
+
+    <main class="content container container--with-padding">
+      <p>Axioma is minimalistic, at-a-glance todo dashboard.</p>
+      <p>
+        At-a-glance is Axioma's unique UI feature. It means that the app never
+        hides anything from you.
+      </p>
+      <p>
+        No multiple nested menus. It's all laid out in front of you, just as it
+        should be.
+      </p>
+    </main>
+  </body>
+</html>
